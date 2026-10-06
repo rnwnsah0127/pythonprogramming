@@ -22,7 +22,7 @@ for count in range(3,0,-1):
             for i in range(1,10):
                 guguLine = ""
                 for k in range(2,10):
-                    guguLine = guguLine + str("%2dX%2d = %2d" %(k, i, k*i))
+                    guguLine = guguLine + str("%2dX%2d = %2d " %(k, i, k*i))
                 print(guguLine)
         else:
             print("오답!")
