@@ -3,9 +3,11 @@ import numpy as np
 U = np.array([1,2,3])
 V = np.array([-4,3,5])
 
+# 각 벡터의 길이
 norm_U = np.linalg.norm(U)
 norm_V = np.linalg.norm(V)
 
+# 두 벡터 사이의 거리
 difference = V - U
 distance = np.linalg.norm(difference)
 

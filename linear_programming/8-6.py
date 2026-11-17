@@ -1,8 +1,10 @@
 import numpy as np
 
+# 주어진 벡터
 U = np.array([1,-1,0],dtype = float)
 V = np.array([2,-1,2],dtype=float)
 
+# 내적과 벡터의 길이
 dot_product = np.dot(U,V)
 norm_U = np.linalg.norm(U)
 norm_V = np.linalg.norm(V)
@@ -15,9 +17,11 @@ print(f"거리 = {distance:.6f}")
 if norm_U == 0 or norm_V == 0:
     raise ValueError("영벡터가 포함되면 각도를 정의할 수 없습니다.")
 
+# cos(theta) = 내적 / 두 벡터의 길이의 곱
 cos_theta = dot_product/ (norm_U * norm_V)
 cos_theta = np.clip(cos_theta,-1.0,1.0)
 
+# 라디안으로 각도를 구한 뒤 도 단위로 변경
 theta_rad = np.arccos(cos_theta)
 theta_deg = np.degrees(theta_rad)
 
